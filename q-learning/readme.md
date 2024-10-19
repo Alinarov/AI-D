@@ -1,4 +1,4 @@
-````markdown 
+
 # Q-Learning 
 El algoritmo que compartiste es **Deep Q-learning con Experience Replay**, una extensión del Q-Learning clásico que utiliza redes neuronales profundas para aproximar las funciones de valor de acción \( Q(s, a) \) en problemas de aprendizaje por refuerzo. A continuación, te describo cada paso del algoritmo:
 
@@ -47,7 +47,7 @@ El algoritmo que compartiste es **Deep Q-learning con Experience Replay**, una e
 El **Deep Q-Learning con Experience Replay** mejora la estabilidad del entrenamiento al almacenar transiciones en una memoria de experiencia y entrenar a la red neuronal con minibatches aleatorios, evitando correlaciones entre transiciones consecutivas. Además, la red neuronal permite al agente aprender en entornos con un gran espacio de estados donde el Q-Learning clásico sería ineficiente.
 
 Este algoritmo es ampliamente utilizado en entornos complejos, como juegos (por ejemplo, el agente de **Atari** desarrollado por DeepMind).
-````
+
 ![image](https://github.com/user-attachments/assets/611676f9-6938-433f-b873-72e287ab6263)
 
 
