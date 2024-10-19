@@ -1,3 +1,4 @@
+````markdown 
 # Q-Learning 
 El algoritmo que compartiste es **Deep Q-learning con Experience Replay**, una extensión del Q-Learning clásico que utiliza redes neuronales profundas para aproximar las funciones de valor de acción \( Q(s, a) \) en problemas de aprendizaje por refuerzo. A continuación, te describo cada paso del algoritmo:
 
@@ -46,6 +47,44 @@ El algoritmo que compartiste es **Deep Q-learning con Experience Replay**, una e
 El **Deep Q-Learning con Experience Replay** mejora la estabilidad del entrenamiento al almacenar transiciones en una memoria de experiencia y entrenar a la red neuronal con minibatches aleatorios, evitando correlaciones entre transiciones consecutivas. Además, la red neuronal permite al agente aprender en entornos con un gran espacio de estados donde el Q-Learning clásico sería ineficiente.
 
 Este algoritmo es ampliamente utilizado en entornos complejos, como juegos (por ejemplo, el agente de **Atari** desarrollado por DeepMind).
-
+````
 ![image](https://github.com/user-attachments/assets/611676f9-6938-433f-b873-72e287ab6263)
 
+
+````markdown
+1. Inicializar la memoria de reproducción (replay memory) D con capacidad N
+2. Inicializar la función de valor de acción Q con pesos aleatorios
+
+3. Para cada episodio = 1, M hacer:
+    4. Inicializar la secuencia inicial s1 (por ejemplo, una imagen del entorno)
+    5. Preprocesar s1 para obtener ϕ1 = ϕ(s1)
+    
+    6. Para cada paso t = 1, T hacer:
+        7. Con probabilidad ε, seleccionar una acción aleatoria at
+        8. De lo contrario, seleccionar la acción que maximiza la función Q:
+           at = argmaxa Q*(ϕ(st), a; θ)
+        
+        9. Ejecutar la acción at en el entorno y observar la recompensa rt y la nueva observación xt+1
+        10. Definir el siguiente estado st+1 = st, xt+1
+        11. Preprocesar st+1 para obtener ϕt+1 = ϕ(st+1)
+
+        12. Almacenar la transición (ϕt, at, rt, ϕt+1) en la memoria de reproducción D
+
+        13. Muestrear un minibatch aleatorio de transiciones (ϕj, aj, rj, ϕj+1) de la memoria D
+
+        14. Para cada transición en el minibatch, hacer:
+            15. Si el estado ϕj+1 es terminal, definir:
+                yj = rj
+            16. De lo contrario, definir:
+                yj = rj + γ * maxa' Q(ϕj+1, a'; θ)
+
+        17. Realizar un paso de descenso de gradiente para minimizar el error cuadrático entre yj y Q(ϕj, aj; θ):
+            L = (yj - Q(ϕj, aj; θ))^2
+
+    18. Fin del ciclo para los pasos t
+
+19. Fin del ciclo para los episodios
+
+
+
+````
