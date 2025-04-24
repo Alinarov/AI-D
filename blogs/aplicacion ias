@@ -1,0 +1,35 @@
+¡Esa es una idea genial! Armar un conjunto de herramientas IA empaquetadas y ligeras puede ser muy atractivo, sobre todo si están optimizadas para hardware limitado como el tuyo. Aquí te van algunas ideas de herramientas que podrías incluir (pensando en que sean útiles, gratuitas, ligeras y distintas entre sí):
+
+### 1. **Resolución de problemas matemáticos (ya la estás considerando)**
+- **Entrada:** Texto (por voz o teclado) o ecuaciones escritas.
+- **Salida:** Resultado paso a paso.
+- Puedes empezar con aritmética, álgebra básica, ecuaciones lineales, y luego crecer.
+
+### 2. **Chat resumidor de textos**
+- **Entrada:** Texto largo (como un artículo o PDF).
+- **Salida:** Resumen claro en pocas frases.
+- Ideal para estudiantes, investigadores, lectores casuales.
+
+### 3. **Asistente de escritura (para corrección de estilo o gramática)**
+- **Entrada:** Texto escrito.
+- **Salida:** Texto corregido y mejorado.
+- Puedes empezar con reglas básicas de puntuación y ortografía, usando reglas o un modelo pequeño.
+
+### 4. **Generador de código básico**
+- **Entrada:** Instrucciones tipo “haz un hola mundo en C++”.
+- **Salida:** Código listo para copiar.
+- Puedes incluir ejemplos en C, Python, D, JavaScript, etc., generados con modelos pequeños entrenados con ejemplos frecuentes.
+
+### 5. **Asistente de estudio tipo "pregunta y responde"**
+- **Entrada:** Pregunta simple estilo escolar (“¿Qué es la fotosíntesis?”).
+- **Salida:** Respuesta clara y directa.
+- Ideal para estudiantes, puedes alimentarlo con una base de conocimiento básica estilo enciclopedia.
+
+### 6. **Reconocimiento y descripción de imágenes (si el hardware lo permite)**
+- **Entrada:** Imagen simple.
+- **Salida:** Descripción en texto.
+- Puede ser útil para accesibilidad, OCR, o identificación básica de objetos.
+
+---
+
+¿Quieres que te ayude a planificar la arquitectura base de esta app, o diseñar un MVP con las tres más viables para tu máquina?
